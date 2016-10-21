@@ -33,21 +33,24 @@
           <span class="icon-bar"></span>
         </button>
         <!-- <a class="navbar-brand" href="#">Brand</a> -->
-        <img src={% static "image/RBC_Royal_Bank.svg.png" %} height="52" width="42">
+        <img src={% static "image/RBC_Royal_Bank.svg.png" %} height="70" width="52">
       </div>
 
       <div class="collapse navbar-collapse" id="my-navbar">
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav navbar-left">
+          <li>
+            <span class="logo-name">RBC Captial Market</span>
+          </li>
         </ul>
 
-        <ul class="nav navbar-nav navbar-right">
+        <!-- <ul class="nav navbar-nav navbar-right">
           <form class="navbar-form navbar-left" action="search">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Search">
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
-        </ul>
+        </ul> -->
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
@@ -61,6 +64,12 @@
   background-image: none;
   background-color: #05398c;
   border-color: #042860;
+}
+.logo-name {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  color: yellow;
+  margin-left: 20px;
 }
 #bodyContent {
   padding-top: 90px;
