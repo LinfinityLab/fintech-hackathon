@@ -12,6 +12,10 @@ def index(request):
     end_date = request.GET.get('end', None)
     share = Share(ticker)
     context = {}
+    if share.get_price() > share.get_open():
+        context['color'] = "green"
+    else:
+        context['color'] = "red"
     if ticker and method:
         if method == "price":
             context["result"] = share.get_price()

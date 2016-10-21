@@ -1,7 +1,23 @@
 {% extends "base.html" %}
 {% load staticfiles%}
 {% block content %}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <div class="container">
+
+    <!-- our logo -->
+    <div class="row">
+
+        <img class="col-md-offset-4 col-md-4" src={% static "image/logo.png" %}>
+    </div>
+    <br>
+    <br>
     <div class="row">
         <div class="col-xs-6 col-xs-offset-3">
             <form action="" method="get">
@@ -12,9 +28,9 @@
                         </button>
                         <ul class="dropdown-menu" role="menu">
                           <li><a class="selection" data="price">Stock Price</a></li>
-                          <li><a class="selection" data="percent_change">percent_change</a></li>
+                          <li><a class="selection" data="percent_change">Percent Change</a></li>
                           <li><a class="selection" data="volume">Volume</a></li>
-                          <li><a class="selection" data="change">Volume</a></li>
+                          <li><a class="selection" data="change">Change</a></li>
                           <li><a class="selection" data="pre_close">pre_close</a></li>
                           <li><a class="selection" data="open">open</a></li>
                           <li><a class="selection" data="avg_daily_volume">avg_daily_volume</a></li>
@@ -44,7 +60,7 @@
                           <li><a>Anything</a></li>
                         </ul>
                     </div>
-                    <input type="hidden" name="method" value="all" id="method">
+                    <input type="hidden" name="method" value="anything" id="method">
                     <input type="text" class="form-control" name="ticker" placeholder="Search for a company">
                     <span class="input-group-btn">
                         <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
@@ -54,9 +70,11 @@
         </div>
 	</div>
 
+    <br>
+    <br>
     <!-- display content -->
     <div class="row">
-        {{ result }}
+        <div class="alert alert-info" role="alert" style="font-size: 2em;">search result is <span style="color: {{ color }};">{{ result }}</span></div>
     </div>
 
 </div>
@@ -65,7 +83,9 @@
 $(function() {
     $('a.selection').on('click', function() {
         var new_value = $(this).attr('data');
+        var new_name = $(this).text();
         $('#method').attr('value', new_value);
+        $('#search_concept').html(new_name);
     });
 });
 
