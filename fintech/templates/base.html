@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Kanic">
     <meta name="author" content="kanic">
-    <title>{% block title %}{% endblock %} Kanic time app</title>
+    <title>{% block title %}{% endblock %} RBC Captail Market</title>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
@@ -58,7 +58,14 @@
     {% block content %}
     {% endblock %}
   </div>
-
+  <div class="row" id="footer">
+    <div class="col-xs-12 text-center">
+      <span class="footer-info">
+        RBC Captail Market
+        <br>
+      </span>
+    </div>
+  </div>
 <style>
 .navbar-default {
   background-image: none;
@@ -73,6 +80,15 @@
 }
 #bodyContent {
   padding-top: 90px;
+  min-height: 700px;
+}
+#footer {
+  padding: 30px 0px;
+  background-color: #f8f8f8;
+}
+.footer-info {
+  font-size: 13px;
+  color: #6b6a6a;
 }
 </style>
 
