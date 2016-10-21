@@ -10,8 +10,13 @@ def index(request):
     method = request.GET.get('method', None)
     start_date = request.GET.get('start', None)
     end_date = request.GET.get('end', None)
-    share = Share(ticker)
+    try:
+        share = Share(ticker)
+    except:
+        return render(request, template_name)
     context = {}
+    context['default'] = ticker
+    context['search_method'] = method
     if share.get_price() > share.get_open():
         context['color'] = "green"
     else:
@@ -26,7 +31,7 @@ def index(request):
         elif method == "volume":
             context["result"] = share.get_volume()
         elif method == "pre_close":
-            context["result"] = share.get_pre_close()
+            context["result"] = share.get_prev_close()
         elif method == "open":
             context["result"] = share.get_open()
         elif method == "avg_daily_volume":

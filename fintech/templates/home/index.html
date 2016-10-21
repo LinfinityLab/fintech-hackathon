@@ -60,8 +60,8 @@
                           <li><a>Anything</a></li>
                         </ul>
                     </div>
-                    <input type="hidden" name="method" value="anything" id="method">
-                    <input type="text" class="form-control" name="ticker" placeholder="Search for a company">
+                    <input type="hidden" name="method" id="method">
+                    <input type="text" class="form-control" name="ticker" placeholder="Search for a company" value="{{ default }}">
                     <span class="input-group-btn">
                         <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
                     </span>
@@ -73,9 +73,13 @@
     <br>
     <br>
     <!-- display content -->
+    {% if search_method %}
     <div class="row">
-        <div class="alert alert-info" role="alert" style="font-size: 2em;">search result is <span style="color: {{ color }};">{{ result }}</span></div>
+        <div class="alert alert-info" role="alert" style="font-size: 2em;">{{ search_method }} for {{ ticker }} is <span style="color: {{ color }};">{{ result }}</span></div>
     </div>
+    {% else %}
+    {% endif %}
+    
 
 </div>
 
