@@ -27,37 +27,37 @@
                         	<span id="search_concept">Filter by</span> <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
+                          <li><a class="selection">Anything</a></li>
+                          <li class="divider"></li>
                           <li><a class="selection" data="price">Stock Price</a></li>
                           <li><a class="selection" data="percent_change">Percent Change</a></li>
                           <li><a class="selection" data="volume">Volume</a></li>
                           <li><a class="selection" data="change">Change</a></li>
-                          <li><a class="selection" data="pre_close">pre_close</a></li>
-                          <li><a class="selection" data="open">open</a></li>
-                          <li><a class="selection" data="avg_daily_volume">avg_daily_volume</a></li>
-                          <li><a class="selection" data="stock_exchange">stock_exchange</a></li>
-                          <li><a class="selection" data="market_cap">market_cap</a></li>
-                          <li><a class="selection" data="book_value">book_value</a></li>
-                          <li><a class="selection" data="ebitda">ebitda</a></li>
-                          <li><a class="selection" data="dividend_share">dividend_share</a></li>
-                          <li><a class="selection" data="dividend_yield">dividend_yield</a></li>
-                          <li><a class="selection" data="earnings_share">earnings_share</a></li>
-                          <li><a class="selection" data="days_high">days_high</a></li>
-                          <li><a class="selection" data="days_low">days_low</a></li>
-                          <li><a class="selection" data="year_high">year_high</a></li>
-                          <li><a class="selection" data="year_low">year_low</a></li>
-                          <li><a class="selection" data="50day_moving_avg">50day_moving_avg</a></li>
-                          <li><a class="selection" data="200day_moving_avg">200day_moving_avg</a></li>
-                          <li><a class="selection" data="price_earnings_ratio">price_earnings_ratio</a></li>
-                          <li><a class="selection" data="price_earnings_growth_ratio">price_earnings_growth_ratio</a></li>
-                          <li><a class="selection" data="price_sales">price_sales</a></li>
-                          <li><a class="selection" data="price_book">price_book</a></li>
-                          <li><a class="selection" data="short_ratio">short_ratio</a></li>
-                          <li><a class="selection" data="trade_datetime">trade_datetime</a></li>
-                          <li><a class="selection" data="historical">historical</a></li>
-                          <li><a class="selection" data="info">info</a></li>
-                          <li><a class="selection" data="name">name</a></li>
-                          <li class="divider"></li>
-                          <li><a>Anything</a></li>
+                          <li><a class="selection" data="pre_close">Pre Close</a></li>
+                          <li><a class="selection" data="open">Open</a></li>
+                          <li><a class="selection" data="avg_daily_volume">Average Daily Volume</a></li>
+                          <li><a class="selection" data="stock_exchange">Stock Exchange</a></li>
+                          <li><a class="selection" data="market_cap">Market Cap</a></li>
+                          <li><a class="selection" data="book_value">Book Value</a></li>
+                          <li><a class="selection" data="ebitda">Ebitda</a></li>
+                          <li><a class="selection" data="dividend_share">Dividend Share</a></li>
+                          <li><a class="selection" data="dividend_yield">Dividend Yield</a></li>
+                          <li><a class="selection" data="earnings_share">Earnings Share</a></li>
+                          <li><a class="selection" data="days_high">Days High</a></li>
+                          <li><a class="selection" data="days_low">Days Low</a></li>
+                          <li><a class="selection" data="year_high">Year High</a></li>
+                          <li><a class="selection" data="year_low">Year Low</a></li>
+                          <li><a class="selection" data="50day_moving_avg">50day Moving Average</a></li>
+                          <li><a class="selection" data="200day_moving_avg">200day Moving Average</a></li>
+                          <li><a class="selection" data="price_earnings_ratio">Price Earnings Ratio</a></li>
+                          <li><a class="selection" data="price_earnings_growth_ratio">Price Earnings Growth Ratio</a></li>
+                          <li><a class="selection" data="price_sales">Price Sales</a></li>
+                          <li><a class="selection" data="price_book">Price Book</a></li>
+                          <li><a class="selection" data="short_ratio">Short Ratio</a></li>
+                          <li><a class="selection" data="trade_datetime">Trade Datetime</a></li>
+                          <li><a class="selection" data="historical">Historical</a></li>
+                          <li><a class="selection" data="info">Info</a></li>
+                          <li><a class="selection" data="name">Name</a></li>
                         </ul>
                     </div>
                     <input type="hidden" name="method" id="method">
@@ -77,9 +77,11 @@
     <div class="row">
         <div class="alert alert-info" role="alert" style="font-size: 2em;">{{ search_method }} for {{ ticker }} is <span style="color: {{ color }};">{{ result }}</span></div>
     </div>
+    <div class="row">
+      <span class="pull-right">Infomation from <a href="https://finance.yahoo.com/">Yahoo Finance</a></span>
+    </div>
     {% else %}
     {% endif %}
-    
 
 </div>
 
