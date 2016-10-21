@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from yahoo_finance import Share
+
 # Create your views here.
 
 def index(request):
