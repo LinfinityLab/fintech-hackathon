@@ -73,14 +73,17 @@
     <br>
     <br>
     <!-- display content -->
-    {% if search_method %}
+    {% if search_method and result%}
     <div class="row">
         <div class="alert alert-info" role="alert" style="font-size: 2em;">{{ search_method }} for {{ ticker }} is <span style="color: {{ color }};">{{ result }}</span></div>
     </div>
     <div class="row">
       <span class="pull-right">Infomation from <a href="https://finance.yahoo.com/">Yahoo Finance</a></span>
     </div>
-    {% else %}
+    {% elif search_method and not result%}
+    <div class="row">
+        <div class="alert alert-info" role="alert" style="font-size: 2em;">Result not found</span></div>
+    </div>
     {% endif %}
 
 </div>
